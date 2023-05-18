@@ -1,0 +1,147 @@
+#block-1 {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 7rem;
+}
+
+#block-1 > .header:nth-child(1) {
+    margin-top: 0;
+}
+
+#categories-menu {
+    position: sticky;
+    top: 12rem;
+    height: min(60rem, 100dvh - 12rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.header {
+    margin-top: 3rem;
+}
+
+#categories-menu > div {
+    cursor: pointer;
+}
+
+#categories-menu > div:nth-child(1) {
+    margin-bottom: 1rem;
+    font-family: Druk
+}
+
+#categories-menu > div:hover {
+    color: var(--accent-color);
+}
+
+main {
+    width: min(130rem, 100% - 5rem);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 5rem;
+    margin-top: 12rem;
+    align-items: flex-start;
+}
+
+.search {
+    display: flex;
+    flex: 1;
+    padding-inline: 1.5rem;
+
+}
+
+.search input {
+    background-image: url(icons/search.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: 3rem;
+    cursor: pointer;
+    border-style: hidden;
+    font-size: inherit;
+    flex-grow: 1;
+    font-family: inherit;
+}
+
+.group-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.group-section > div {
+    flex: 1;
+    min-width: 25rem;
+    max-width: 25%;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: box-shadow .1s ease-out;
+}
+
+.group-section > div:hover {
+    box-shadow: 0 0 50px -20px #ccc;
+}
+
+.group-section > div * {
+    cursor: pointer;
+}
+
+.group-section h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.group-section > div > div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+}
+
+.group-section > div > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.group-section p::after {
+    content: " ₽"
+}
+
+.group-section span img {
+    border-radius: .5rem;
+}
+
+.add-to-cart {
+    height: 3rem;
+    padding: .25rem;
+    transition: padding .1s ease-out;
+}
+
+.add-to-cart:hover {
+    padding: 0;
+}
+
+#sales-section {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .2s ease;
+}
+
+#sales-section > div {
+    overflow: hidden;
+}
+
+#expand-btn {
+    transform: rotate(45deg);
+    transition: transform .2s ease-out;
+    margin-block: 3rem;
+}

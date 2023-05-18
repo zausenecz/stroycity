@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>СтройСити</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./main-page.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav>
+        <div id="nav-line1">
+            <div>СтройСити</div>
+            <div>✉ info@mail.com</div>
+            <div><a href="#">🕽 Позвоните нам</a></div>
+            <div>+7 (800) 111-22-33</div>
+        </div>
+        <div id="nav-line2">
+            <div class="current-page">Главная</div>
+            <div onclick="window.location.href = 'catalog.html'">Каталог товаров</div>
+            <div onclick="window.location.href = 'order.html'">Оформление заказа</div>
+            <div onclick="window.location.href = '#'">О нас</div>
+            <div onclick="window.location.href = '#'">Собственное производство</div>
+            <div onclick="window.location.href = '#'">Контакты</div>
+        </div>
+    </nav>
+
+    <!-- Навигация (на странице) -->
+    <div id="fake-nav__wrapper">
+        <div id="fake-nav">
+            <div class="current-page">Главная</div>
+            <div onclick="window.location.href = 'catalog.html'">Каталог товаров</div>
+            <div onclick="window.location.href = 'order.html'">Оформление заказа</div>
+            <div onclick="window.location.href = '#'">О нас</div>
+            <div onclick="window.location.href = '#'">Собственное производство</div>
+            <div onclick="window.location.href = '#'">Контакты</div>
+        </div>
+    </div>
+
+    <!-- Главный экран -->
+    <div id="main-hero">
+        <div id="main-bg">
+            <img src="assets/images/main-bg.jpg">
+        </div>
+
+        <div id="main-txt">
+            <h1>большой выбор стройматериалов для городских и загородных построек</h1>
+            <p>По всей России</p>
+            <div onclick="window.location.href = 'order.html'" class="button">Оставить заявку</div>
+        </div>
+    </div>
+
+    <!-- Основная страница -->
+    <main>
+        <section id="block-1">
+
+            <!-- Скроллер с кнопками и заголовком -->
+            <div class="header">
+                <h1>Виды стройматериалов</h1>
+                <span></span>
+                <div>
+                    <!-- Move([айдишник скроллера],[напраление]) -->
+                    <div onclick="Move('product-scroller', 'left')" class="arrow">❮</div>
+                    <div onclick="Move('product-scroller', 'right')" class="arrow">❯</div>
+                </div>
+            </div>
+            <div class="item-scroller" id="product-scroller">
+                <div class="item" onclick="window.location.href = 'catalog.html#product-group-1'">
+                    <div><span>Кирпичи и блоки</span></div>
+                    <div></div>
+                    <img src="https://i.pinimg.com/originals/9e/64/d5/9e64d5ba72ed5c28025e0941adde6c56.png">
+                </div>
+                <div class="item" onclick="window.location.href = 'catalog.html#product-group-2'">
+                    <div><span>Цемент и бетон</span></div>
+                    <div></div>
+                    <img src="https://www.smartstonelandscape.com.au/beenleigh/wp-content/uploads/2021/01/Apex_Grey_Block_20.01-1.png">
+                </div>
+                <div class="item" onclick="window.location.href = 'catalog.html#product-group-3'">
+                    <div><span>Древесина и пиломатериалы</span></div>
+                    <div></div>
+                    <img src="https://www.pngkit.com/png/full/11-117289_wood-for-construction-interior-design-projects-wood-png.png">
+                </div>
+                <div class="item" onclick="window.location.href = 'catalog.html#product-group-4'">
+                    <div><span>Металлы и профнастил</span></div>
+                    <div></div>
+                    <img src="https://fortis-steel.ru/upload/iblock/05e/014.png">
+                </div>
+                <div class="item" onclick="window.location.href = 'catalog.html#product-group-5'">
+                    <div><span>Кровельные материалы</span></div>
+                    <div></div>
+                    <img src="https://profmetall50.ru/upload/iblock/572/5726252adbfee81ca3fa597ca668870a.png">
+                </div>
+                <div class="item" onclick="window.location.href = 'catalog.html#product-group-6'">
+                    <div><span>Изоляция и гидроизоляция</span></div>
+                    <div></div>
+                    <img src="https://www.behr.com/binaries/content/gallery/behrbrxm/products/product-can-images-2021/wood-stains-and-finishes/trans-stains/501_01_us_web.png">
+                </div>
+                <div class="item" onclick="window.location.href = 'catalog.html#product-group-7'">
+                    <div><span>Сухие смеси и штукатурки</span></div>
+                    <div></div>
+                    <img src="https://bundex.ru/upload/iblock/4ef/shuba.png">
+                </div>
+                <div class="item" onclick="window.location.href = 'catalog.html#product-group-8'">
+                    <div><span>Лакокрасочные материалы</span></div>
+                    <div></div>
+                    <img src="https://tuapse.pogzashita.ru/wp-content/uploads/2021/06/gudhim-110-300x300.png">
+                </div>
+                <div class="item" onclick="window.location.href = 'catalog.html#product-group-9'">
+                    <div><span>Обои и плитка</span></div>
+                    <div></div>
+                    <img src="https://flexagroup.ru/media/product/1-5-2-3.png.500x500_q85.png">
+                </div>
+                <div class="item" onclick="window.location.href = 'catalog.html#product-group-10'">
+                    <div><span>Полы и потолки</span></div>
+                    <div></div>
+                    <img src="https://www.docsign.in/wp-content/uploads/2018/11/Ceiling-OT-Light-PNG-Transparent-Image.png">
+                </div>
+                <div class="item" onclick="window.location.href = 'catalog.html#product-group-11'">
+                    <div><span>Двери и окна</span></div>
+                    <div></div>
+                    <img src="https://pngimg.com/d/window_PNG17665.png">
+                </div>
+                <div class="item" onclick="window.location.href = 'catalog.html#product-group-12'">
+                    <div><span>Сантехника и электрика</span></div>
+                    <div></div>
+                    <img src="https://static.wixstatic.com/media/26229a_d6e247c62d9243ccb5041fb766b4b46a~mv2.png/v1/fill/w_508,h_268,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1-min%20(2).png">
+                </div>
+
+            </div>
+            <!-- конец скроллера с кнопками и заголовком -->
+
+            <div class="header">
+                <h1>8 лет на рынке</h1>
+                <span></span>
+            </div>
+            <div class="info-block">
+                <div>
+                    <div><span>70 453 </span>товара</div>
+                    <div>продано</div>
+                </div>
+                <div>
+                    <div><span>7 569</span></div>
+                    <div>довольных клиентов</div>
+                </div>
+                <div>
+                    <div><span>100 </span>проектов</div>
+                    <div>утверждено и реализовано</div>
+                </div>
+            </div>
+
+
+        </section>
+        <section id="block-2">
+            <div class="default-bg">
+                <img src="https://images.unsplash.com/photo-1511452885600-a3d2c9148a31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=721&q=80">
+            </div>
+            <div class="header">
+                <h1>Преимущества нашего сайта</h1>
+            </div>
+            <p>Почему выбирают нас?</p>
+            <div id="why-us-block">
+                <div>Большой ассортимент товаров</div>
+                <div>Качественная продукция от проверенных поставщиков</div>
+                <div>Доставка по всей России</div>
+                <div>Гарантия и возврат товара в течение 14 дней</div>
+                <div>Оплата наличными или картой при получении</div>
+            </div>
+            <div class="header">
+                <h1>СТРОЙСИТИ</h1>
+                <div onclick="window.location.href = 'catalog.html'" class="button">Перейти к товарам</div>
+            </div>
+        </section>
+        <section id="block-3">
+            <div class="header">
+                <h1>Что говорят о нас?</h1>
+                <span></span>
+                <div>
+                    <!-- Move([айдишник скроллера],[напраление]) -->
+                    <div onclick="Move('review-scroller', 'left')" class="arrow">❮</div>
+                    <div onclick="Move('review-scroller', 'right')" class="arrow">❯</div>
+                </div>
+            </div>
+            <div class="item-scroller" id="review-scroller">
+                <div class="item">
+                    <div><span>Отличный магазин стройматериалов! Большой выбор, хорошие цены, быстрая доставка. Рекомендую всем!</span></div>
+                    <div></div>
+                    <div>Алексей Иванов</div>
+                </div>
+                <div class="item">
+                    <div><span>Покупал у них кирпичи и цемент для строительства дома. Остался доволен качеством и обслуживанием. Спасибо за вашу работу!</span></div>
+                    <div></div>
+                    <div>Мария Петрова</div>
+                </div>
+                <div class="item">
+                    <div><span>Нашел все, что нужно для ремонта квартиры. Менеджеры помогли подобрать оптимальный вариант. Доставили в срок и без повреждений. Буду обращаться снова!</span></div>
+                    <div></div>
+                    <div>Сергей Смирнов</div>
+                </div>
+                <div class="item">
+                    <div><span>Отличный магазин стройматериалов! Большой выбор, хорошие цены, быстрая доставка. Рекомендую всем!</span></div>
+                    <div></div>
+                    <div>Елена Кузнецова</div>
+                </div>
+                <div class="item">
+                    <div><span>Заказывала у них обои и плитку для ванной. Очень довольна результатом. Красивые и качественные материалы. Доставили быстро и аккуратно. Спасибо большое!</span></div>
+                    <div></div>
+                    <div>Ольга Соколова</div>
+                </div>
+                <div class="item">
+                    <div><span>Решил сделать потолок из гипсокартона. Нашел все необходимое в этом магазине. Менеджеры подсказали, как правильно установить и заштукатурить. Сделал все сам, получилось отлично. Благодарю за помощь!</span></div>
+                    <div></div>
+                    <div>Дмитрий Новиков</div>
+                </div>
+
+            </div>
+            <div>
+                <div class="button">Оставить свой отзыв</div>
+            </div>
+
+        </section>
+    </main>
+    <footer>ZauSenecZ design, <script>
+            document.write(/\d{4}/.exec(Date())[0])
+
+        </script>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+:root {
+    counter-reset: item info review;
+}
+
+#main-hero {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    overflow-y: hidden;
+}
+
+#main-bg {
+    position: absolute;
+    top: 0;
+    min-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#main-bg img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: top;
+    filter: brightness(var(--brightness));
+}
+
+#main-txt {
+    width: min(100rem, 100% - 10rem);
+    margin-inline: auto;
+    z-index: 1;
+}
+
+#main-txt > div:last-child {
+    margin-top: 3rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 3rem;
+    color: white;
+    position: relative;
+    box-shadow: 3px 5px 50px -10px #676f7c;
+    transition: box-shadow .2s ease;
+}
+
+.item:hover {
+    box-shadow: 3px 5px 50px 0px #676f7c;
+}
+
+.item:nth-child(2n) {
+    box-shadow: 3px 5px 50px -10px var(--accent-color);
+}
+
+.item:hover:nth-child(2n) {
+    box-shadow: 3px 5px 50px 0px var(--accent-color);
+}
+
+.item span {
+    font-family: Druk;
+}
+
+.item > div:nth-child(2) {
+    border-left: 1px solid #ccc;
+    flex: 1;
+    width: 1px;
+}
+
+#product-scroller .item::after {
+    counter-increment: item;
+    content: "0"counter(item);
+}
+
+#product-scroller .item:nth-child(n+10):after {
+    content: counter(item);
+}
+
+.item img {
+    position: absolute;
+    width: 45%;
+    height: 65%;
+    object-fit: contain;
+    bottom: 0;
+    right: 0;
+    object-position: bottom right;
+}
+
+#block-2 {
+    z-index: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 110dvh;
+}
+
+#why-us-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-block: 5rem;
+}
+
+#why-us-block > div {
+    flex: 1 1 50rem;
+    padding: 2rem 3rem;
+}
+
+#why-us-block > div::before {
+    counter-increment: info;
+    content: counter(info);
+    margin-right: 3rem;
+    color: #ccc;
+}
+
+#block-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#review-scroller .item {
+    font-size: 1.2rem;
+    gap: 1rem;
+}
+
+#review-scroller span {
+    font-family: inherit;
+    font-size: 1.5rem;
+}
+
+#block-3 .button:hover {
+    color: var(--accent-color);
+}

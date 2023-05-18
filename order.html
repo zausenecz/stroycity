@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>СтройСити - Оформление заказа</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./order.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Навигация (на странице) -->
+    <div id="fake-nav__wrapper">
+        <div id="fake-nav">
+            <div onclick="window.location.href = 'index.html'">Главная</div>
+            <div onclick="window.location.href = 'catalog.html'">Каталог товаров</div>
+            <div class="current-page">Оформление заказа</div>
+            <div onclick="window.location.href = '#'">О нас</div>
+            <div onclick="window.location.href = '#'">Собственное производство</div>
+            <div onclick="window.location.href = '#'">Контакты</div>
+        </div>
+    </div>
+
+    <!-- Основная страница -->
+    <main>
+        <section id="block-1">
+
+            <div class="header">
+                <h1>Оформление заказа</h1>
+            </div>
+            <p>Заполните форму ниже и подтвердите свой заказ</p>
+
+            <div id="form__wrapper">
+                <form>
+                    <input id="name" type="text" placeholder="ФИО*">
+                    <input id="phone" type="text" placeholder="Телефон*">
+                    <input id="email" type="email" placeholder="E-mail*">
+                    <input id="address" type="text" placeholder="Адрес доставки*">
+                    <input id="payment" type="text" placeholder="Способ оплаты*">
+                    <select class="category" id="category" size="1">
+                        <option>Способ оплаты*</option>
+                        <option>Банковская карта</option>
+                        <option>WebMoney</option>
+                        <option>Qiwi</option>
+                        <option>Мобильный телефон</option>
+                        <option>При получении</option>
+                    </select>
+                    <textarea id="comment" placeholder="Комментарий к заказу (необязательно)"></textarea>
+                    <input type="submit">
+                </form>
+            </div>
+
+
+
+        </section>
+    </main>
+    <footer>ZauSenecZ design,
+        <script>
+            document.write(/\d{4}/.exec(Date())[0])
+
+        </script>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

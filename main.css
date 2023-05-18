@@ -1,0 +1,259 @@
+:root {
+    --accent-color: #3ac697;
+    /* Цвет блоков*/
+    --brightness: 50%;
+    /* Затеменение картинок*/
+
+}
+
+@font-face {
+    font-family: Druk;
+    src: url(assets/fonts/Druk.otf)
+}
+
+@font-face {
+    font-family: TTNorms;
+    src: url(assets/fonts/TTNorms.ttf)
+}
+
+* {
+    color: inherit;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+a {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+html {
+    font-size: 12px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: TTNorms;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 1.5rem;
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+footer {
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.button {
+    background: var(--accent-color);
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    font-size: .9em;
+    cursor: pointer;
+    border: 3px solid var(--accent-color);
+    transition: background .1s ease-out;
+    border-radius: .5rem;
+    color: white;
+}
+
+.button:hover {
+    background: transparent;
+}
+
+.current-page::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-bottom: 1px solid;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    min-width: 100%;
+    z-index: 2;
+}
+
+#fake-nav__wrapper {
+    position: fixed;
+    top: 0;
+    min-width: 100%;
+    background: var(--accent-color);
+    z-index: 1;
+    box-shadow: 0 -20px 50px 0 #666;
+}
+
+nav > div,
+#fake-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    color: white;
+    flex-wrap: wrap;
+    width: min(120rem, 100% - 5rem);
+    margin-inline: auto;
+}
+
+#nav-line1 > div:first-child,
+#nav-line1 > div:last-child {
+    /* Название сайта и номер*/
+
+    text-transform: uppercase;
+    font-family: Druk;
+}
+
+nav > div > div,
+#fake-nav > div {
+    padding: 2rem 0;
+    cursor: pointer;
+    position: relative;
+}
+
+#nav-line2 > div::before,
+#fake-nav > div::before {
+    content: "";
+    position: absolute;
+    inset: 50%;
+    border-bottom: 1px solid;
+    bottom: 0;
+    transition: inset .1s ease-out;
+}
+
+#nav-line2 > div:hover::before,
+#fake-nav > div:hover::before {
+    inset: 0%;
+}
+
+h1 {
+    font-family: Druk;
+    text-transform: uppercase;
+}
+
+main {
+    width: min(120rem, 100% - 5rem);
+    margin-inline: auto;
+}
+
+section {
+    height: 100dvh;
+    margin-top: 12rem;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 7rem;
+
+}
+
+.header > span {
+    border: 1px solid #eee;
+    flex: 1;
+}
+
+.header > div {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.item-scroller {
+    display: flex;
+    padding-block: 5rem;
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-left: max((100vw - 120rem) / 2, 5rem / 2);
+}
+
+.item-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    height: 26rem;
+    aspect-ratio: 1.3/1;
+    background: #676f7c;
+    border-radius: .5rem;
+    margin-right: 7rem;
+    scroll-snap-align: center;
+    cursor: pointer;
+}
+
+.item * {
+    cursor: pointer;
+}
+
+.item:nth-child(2n) {
+    background: var(--accent-color);
+}
+
+.arrow {
+    font-size: 2rem;
+    background: transparent;
+    aspect-ratio: 1;
+    width: 5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transition: background .1s ease-out;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrow:hover {
+    background: #eee;
+}
+
+.info-block {
+    display: flex;
+    justify-content: space-around;
+    margin-block: 5rem;
+}
+
+.info-block span {
+    font-family: Druk;
+    font-size: 2.5rem;
+}
+
+
+.info-block > div::after {
+    content: '\A-';
+    font-family: Druk;
+    font-size: 2.5rem;
+    white-space: pre-wrap;
+}
+
+.default-bg {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    height: 100%;
+    overflow: hidden;
+}
+
+.default-bg img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    filter: brightness(var(--brightness));
+}
